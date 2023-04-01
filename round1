@@ -1,18 +1,17 @@
 
-function fizz(var num){
-
-  var number=0
+function fizz(num){
+    // console.log(num);
+  var number=0;
   while(num){
-    number += num%10;
+    number = number + (((num % 10) + 10) % 10);
     num/=10;
   }
-  
-  while(number) {
-      var i = number%10;
-      number = numbe/10;
-      if (i % 3 == 0 && i % 4==0) console.log("FizzBuzz");
-      else if (i % 3 == 0) console.log("Fizz");
-      else if (i % 4 == 0) console.log("Buzz");
-      else console.log(number)
+  console.log(number);
+ for(var i=1;i<=number;i++){
+      if (i % 3 == 0 && i % 4==0) console.log("FizzBuzz\r");
+      else if (i % 3 == 0) console.log("Fizz\r");
+      else if (i % 4 == 0) console.log("Buzz\r");
+      else console.log(i+"\r")
   }
 }
+fizz(7009035854);
