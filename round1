@@ -1,17 +1,21 @@
-function fizz(num){
-    // console.log(num);
-  var number=0;
-  while(num){
-    number = number + parseInt((((num % 10) + 10) % 10));
-    // console.log(parseInt((((num % 10) + 10) % 10)));
-    num= parseInt(num/10);
-  }
-//   console.log(number);
- for(var i=1;i<=number;i++){
-      if (i % 3 == 0 && i % 4==0) console.log("FizzBuzz");
-      else if (i % 3 == 0) console.log("Fizz");
-      else if (i % 4 == 0) console.log("Buzz");
-      else console.log(i)
-  }
+function fizz(number){
+    
+    var sum=0;
+    while(number){
+        sum += parseInt(number%10);
+        number = parseInt(number/10);
+    }
+    var ans =""
+    for(var i=1;i<=sum;i++){
+        if(i%3==0 && i%4==0)ans += "FizzBuzz ";
+        
+        else if(i%3==0)ans += "Fizz ";
+        
+        else if(i%4==0)ans += "Buzz ";
+        
+        else ans += `${i}`+" ";
+    }
+    console.log(ans);
+    
 }
-fizz(7009035854);
+fizz(7009035854)
