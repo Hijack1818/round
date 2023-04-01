@@ -1,5 +1,12 @@
 
-function fizz(var number){
+function fizz(var num){
+
+  var number=0
+  while(num){
+    number += num%10;
+    num/=10;
+  }
+  
   while(number) {
       var i = number%10;
       number = numbe/10;
